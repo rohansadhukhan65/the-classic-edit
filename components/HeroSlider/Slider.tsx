@@ -39,6 +39,8 @@ useEffect(() => {
                 src={`${Img && Img.link}`}
                  width={1728}
                  height={753}
+                // fill
+                // sizes="(min-width: 808px) 50vw, 100vw"
                 alt="Picture of the author"
                 className='h-[500px]'
             /> :''  }

@@ -28,7 +28,7 @@ export default function Header() {
       {/* Logo */}
       <div className='h-5'>Logo</div>
       {/* Menu */}
-      <div className='flex gap-5'>
+      <div className='gap-5 hidden md:flex'>
         <div>Home</div>
         <div>Men</div>
         <div>Women</div>
@@ -40,7 +40,11 @@ export default function Header() {
         <div><SearchIcon/></div>
         <div><UserIcon/></div>
         <div><ShoppingCartIcon/></div>
+        {/* Nav Icon */}
+        <div className='block md:hidden cursor-pointer'>Nav</div>
       </div>
+
+      
     </nav>
   )
 }
