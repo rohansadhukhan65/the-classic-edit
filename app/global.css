@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body , html {
+    height: 100%;
+}
+
+
+
+/* Hero Carausel Style in home page */
+.HeroSlider{
+    height: 50%;
+}
