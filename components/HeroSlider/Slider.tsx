@@ -37,7 +37,7 @@ useEffect(() => {
     <div ref={scope} className={`w-[100%]  ${Class} ${active ? 'block' : 'hidden'}`}>
            {Img? <Image
                 src={`${Img && Img.link}`}
-                 width={1000}
+                 width={1728}
                  height={753}
                 alt="Picture of the author"
                 className='h-[500px]'
