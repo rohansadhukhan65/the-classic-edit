@@ -26,4 +26,7 @@ export default function useScrollProgress(): number {
   return completion;
 }
 
-}
+
+
+
+
