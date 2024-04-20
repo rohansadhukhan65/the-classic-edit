@@ -22,7 +22,6 @@ export default function Slider({Img,link,Class,ActiveIndex,children,SlideKey}:Ip
   const [scope, animate] = useAnimate()
   
 useEffect(() => {
-  console.log(ActiveIndex,SlideKey)
   if(ActiveIndex === SlideKey){
     setActive(true)
     animate(scope.current,{ opacity: 1, x: 0  }, { delay: stagger(0.5) })
@@ -37,7 +36,7 @@ useEffect(() => {
     <div ref={scope} className={`w-[100%]  ${Class} ${active ? 'block' : 'hidden'}`}>
            {Img? <Image
                 src={`${Img && Img.link}`}
-                 width={1728}
+                 width={3000}
                  height={753}
                 // fill
                 // sizes="(min-width: 808px) 50vw, 100vw"
