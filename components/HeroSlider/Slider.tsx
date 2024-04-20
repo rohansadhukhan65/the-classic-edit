@@ -41,7 +41,7 @@ useEffect(() => {
                 // fill
                 // sizes="(min-width: 808px) 50vw, 100vw"
                 alt="Picture of the author"
-                className='h-[600px]'
+                className='md:h-[600px]'
             /> :''  }
       {children}
     </div>

@@ -291,27 +291,27 @@ export const collections = [
     {
     "name": "Classic",
     "description": "Timeless and elegant suits for any occasion.",
-    "image": "https://example.com/classic-collection.jpg"
+    "image": "/Img/CollectionImages/classic-collection.jpg"
     },
     {
     "name": "Modern",
     "description": "Sleek and contemporary suits for the modern man.",
-    "image": "https://example.com/modern-collection.jpg"
+    "image": "/Img/CollectionImages/modern-collection.jpg"
     },
     {
     "name": "Vintage",
     "description": "Vintage-inspired suits for a retro look.",
-    "image": "https://example.com/vintage-collection.jpg"
+    "image": "/Img/CollectionImages/vintage-collection.jpg"
     },
     {
     "name": "Formal",
     "description": "Elegant tuxedos and formal suits for special occasions.",
-    "image": "https://example.com/formal-collection.jpg"
+    "image": "/Img/CollectionImages/formal-collection.jpg"
     },
     {
     "name": "Business",
     "description": "Sophisticated business suits for the professional man.",
-    "image": "https://example.com/business-collection.jpg"
+    "image": "/Img/CollectionImages/business-collection.jpg"
     }
         
       

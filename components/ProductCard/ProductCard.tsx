@@ -46,7 +46,7 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,Produc
                 height={320}
                 width={238}
                 alt='Product'
-                className='rounded-md h-[320px]'
+                className='rounded-md md:h-[320px]'
             />
         </div>
         <div className='flex gap-x-3 items-center justify-start'>
