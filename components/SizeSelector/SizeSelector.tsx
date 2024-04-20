@@ -17,7 +17,7 @@ const SizeSelector = ({sizes , onSelect}:Iprop) => {
     <div className='flex'>
       {sizes.map((size:any,key:number) => (
         <div key={key} onClick={() => {SizeSelector(size)}} 
-        className={`border px-3 py-2 cursor-pointer hover:bg-orange-200 ${size === SelectedSize?'bg-orange-200':''}`}>{size}</div>
+        className={`border px-3 py-2 cursor-pointer hover:bg-orange-200 transition-all duration-300 ${size === SelectedSize?'bg-orange-200':''}`}>{size}</div>
       ))}
     </div>
     </>

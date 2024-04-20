@@ -8,35 +8,53 @@ import AddToCartButton from '../AddToCartButton/AddToCartButton'
 
 interface Iprop{
   ProductID?: string;
-  ImageUrl? : string;
-  Price?: number;
-  DiscountPrice?: number;
-  DiscountPersentage?: string;
+  ImageUrl : string;
+  Price: number;
+  DiscountPrice: number;
   ProductTitle?: string;
-  ProductReviewCount?: number;
-  ProductStarCount?: number;
+  ProductReviewCount: number;
+  ProductStarCount: number;
   ProductSizeArray?: any;
 }
-const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,DiscountPersentage,ProductTitle,ProductReviewCount,ProductStarCount,ProductSizeArray}:Iprop) => {
+const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,ProductReviewCount,ProductStarCount,ProductSizeArray}:Iprop) => {
+  
+  function calculateDiscount(originalPrice:number, discountedPrice:number) {
+    // Check if prices are valid
+    if (originalPrice <= 0 || discountedPrice <= 0) {
+        throw new Error("Prices must be greater than zero.");
+    }
+
+    // If the discounted price is greater than or equal to the original price, there's no discount
+    if (originalPrice <= discountedPrice) {
+        return 0.0;
+    }
+
+    // Calculate the discount percentage
+    const discountAmount = originalPrice - discountedPrice;
+    const discountPercentage = (discountAmount / originalPrice) * 100;
+    return discountPercentage.toFixed(2);
+}
+
+
   return (
     <>
       <div className='flex flex-col w-[240px] gap-y-3 m-3 mx-auto'>
         <div>
             {/* Image */}
             <Image
-                src={'/Img/productImages/prodOne.png'}
+                src={`${ImageUrl}`}
                 height={320}
                 width={238}
                 alt='Product'
-                className='rounded-md'
+                className='rounded-md md:h-[320px]'
             />
         </div>
         <div className='flex gap-x-3 items-center justify-start'>
             {/* price */}
             <p className='text-xl'>₹{Price}</p>
             <p className='flex gap-x-2 text-gray-600 text-sm'>
-              <del>₹9,000</del>
-              <span className='text-green-500'>20% OFF</span>
+              <del>₹{DiscountPrice}</del>
+              <span className='text-green-500'>{calculateDiscount(DiscountPrice,Price)}% OFF</span>
             </p>
         </div>
         <div>
@@ -45,7 +63,7 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,DiscountPersentage,
         </div>
         <div>
             {/* review star */}
-            <StarRatingWithReviewCounter reviewCount={15} fullStar={3}/>
+            <StarRatingWithReviewCounter reviewCount={ProductReviewCount} fullStar={ProductStarCount}/>
         </div>
         <div>
             {/* size Seceltor */}
