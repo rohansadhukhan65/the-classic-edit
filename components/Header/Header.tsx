@@ -26,21 +26,25 @@ export default function Header() {
   return (
     <nav className={`bg-[#F5F0EB] w-full ${isScrolled ? 'fixed top-0 shadow-md' : ''} flex justify-around items-center h-[80px]`}>
       {/* Logo */}
-      <div className='h-5'>Logo</div>
+      <div className='h-5 cursor-pointer'>Logo</div>
       {/* Menu */}
-      <div className='flex gap-5'>
-        <div>Home</div>
-        <div>Men</div>
-        <div>Women</div>
-        <div>Exclusive</div>
-        <div>Blog</div>
+      <div className='gap-5 hidden md:flex'>
+        <div className='cursor-pointer'>Home</div>
+        <div className='cursor-pointer'>Men</div>
+        <div className='cursor-pointer'>Women</div>
+        <div className='cursor-pointer'>Exclusive</div>
+        <div className='cursor-pointer'>Blog</div>
       </div>
       {/* Nav Icons */}
       <div className='flex gap-2'>
-        <div><SearchIcon/></div>
-        <div><UserIcon/></div>
-        <div><ShoppingCartIcon/></div>
+        <div className='cursor-pointer'><SearchIcon/></div>
+        <div className='cursor-pointer'><UserIcon/></div>
+        <div className='cursor-pointer'><ShoppingCartIcon/></div>
+        {/* Nav Icon */}
+        <div className='block md:hidden cursor-pointer'>Nav</div>
       </div>
+
+      
     </nav>
   )
 }
