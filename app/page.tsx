@@ -12,7 +12,13 @@ export default function Home() {
     <FlashSalesBar/>
     <Header/>
       <HeroSlider/>
-      <ProductCardWithCategoryTab/>
+
+      {/* Tabs Section */}
+      <div className="container px-36 mx-auto my-10">
+        <div className="text-center text-5xl font-semibold my-5">Bestsellers</div>
+        <ProductCardWithCategoryTab/>
+      </div>
+      
     <Footer/>
   </UserLayout>
   );

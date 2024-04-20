@@ -4,6 +4,7 @@ import './ProductCard.css'
 import Image from 'next/image'
 import StarRatingWithReviewCounter from '../StarRatingWithReviewCounter/StarRatingWithReviewCounter'
 import SizeSelector from '../SizeSelector/SizeSelector'
+import AddToCartButton from '../AddToCartButton/AddToCartButton'
 
 interface Iprop{
   ProductID?: string;
@@ -19,7 +20,7 @@ interface Iprop{
 const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,DiscountPersentage,ProductTitle,ProductReviewCount,ProductStarCount,ProductSizeArray}:Iprop) => {
   return (
     <>
-      <div className='flex flex-col w-[240px] gap-y-3 m-3'>
+      <div className='flex flex-col w-[240px] gap-y-3 m-3 mx-auto'>
         <div>
             {/* Image */}
             <Image
@@ -32,15 +33,15 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,DiscountPersentage,
         </div>
         <div className='flex gap-x-3 items-center justify-start'>
             {/* price */}
-            <p className='text-xl'>$8,200</p>
+            <p className='text-xl'>₹{Price}</p>
             <p className='flex gap-x-2 text-gray-600 text-sm'>
-              <del>$9,000</del>
+              <del>₹9,000</del>
               <span className='text-green-500'>20% OFF</span>
             </p>
         </div>
         <div>
             {/* Product Title */}
-            <div>Lorem Ipsum Dolor Amit</div>
+            <div>{ProductTitle}</div>
         </div>
         <div>
             {/* review star */}
@@ -48,10 +49,11 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,DiscountPersentage,
         </div>
         <div>
             {/* size Seceltor */}
-            <SizeSelector sizes={['S','M','L','XL','XXL']}/>
+            <SizeSelector sizes={ProductSizeArray}/>
         </div>
         <div>
             {/* Add to Cart Button */}
+            <AddToCartButton/>
         </div>
       </div>
     </>
