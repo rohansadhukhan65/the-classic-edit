@@ -38,7 +38,7 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,Produc
 
   return (
     <>
-      <div className='flex flex-col w-[240px] gap-y-3 m-3 mx-auto'>
+      <div className='flex flex-col w-[170px] md:w-[200px]  gap-y-3 m-3 mx-auto'>
         <div>
             {/* Image */}
             <Image
@@ -46,10 +46,10 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,Produc
                 height={320}
                 width={238}
                 alt='Product'
-                className='rounded-md md:h-[320px]'
+                className='rounded-md md:h-[320px] h-[270px] w-auto'
             />
         </div>
-        <div className='flex gap-x-3 items-center justify-start'>
+        <div className='flex flex-col md:flex-row gap-x-3 items-start md:items-center justify-start'>
             {/* price */}
             <p className='text-xl'>₹{Price}</p>
             <p className='flex gap-x-2 text-gray-600 text-sm'>
@@ -59,7 +59,7 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,Produc
         </div>
         <div>
             {/* Product Title */}
-            <div>{ProductTitle}</div>
+            <div className='font-semibold'>{ProductTitle}</div>
         </div>
         <div>
             {/* review star */}

@@ -49,17 +49,17 @@ export default function HeroSlider() {
             <div className="flex w-[100%]">
             {SlidersArray.map((slide,key) => {
                 return <Slider   Img={slide.Image} SlideKey={key + 1} key={key} ActiveIndex={ActiveIndex}>
-                    <div className="absolute top-[20%] left-[15%]">
-                        <h1 className="text-white font-semibold text-6xl my-5">Suit up for</h1>
-                        <h1 className="text-white font-semibold text-6xl my-5">Success</h1>
-                        <button className="bg-white rounded-sm px-9 py-2 font-semibold  my-5" >SHOP NOW</button>
+                    <div className="absolute top-[55%] md:top-[20%] left-[15%]">
+                        <h1 className="text-white md:font-semibold text-4xl md:text-6xl md:my-5">Suit up for</h1>
+                        <h1 className="text-white md:font-semibold text-4xl md:text-6xl md:my-5">Success</h1>
+                        <button className="bg-white rounded-sm px-5 md:px-9 py-2 text-sm md:text-xl font-semibold  my-5" >SHOP NOW</button>
                     </div>
                 </Slider>
             })}
             </div>
 
             {/* Arrows */}
-            <div className="absolute flex justify-between w-[100%] top-[50%] right-[50%] transform translate-x-[50%]">
+            <div className="absolute flex justify-between w-[100%] top-[45%] md:top-[50%] right-[50%] transform translate-x-[50%]">
                 <button onClick={LeftHandler} className="mx-10" ><LeftArrowIcon/></button>
                 <button onClick={RightHandler} className="mx-10"> <RightArrowIcon/></button>
             </div>
@@ -69,7 +69,5 @@ export default function HeroSlider() {
                 {SlidersArray.map((slide,key)=> <Dots key={key} isActive={ActiveIndex=== (key +1)?true:false}/>)}
             </div>
         </div>
-   
-       
       );
 }

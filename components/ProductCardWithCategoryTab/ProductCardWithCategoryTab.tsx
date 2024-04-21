@@ -16,7 +16,7 @@ const ProductCardWithCategoryTab = () => {
   return (
      <>
      <Tab defaultTab={collections[0].name} TabList={collections.map((item) => item.name)} currentTab={(tabName:string)=>{setSelectedTab(tabName)}} >
-        <div className='container grid grid-cols-1  md:grid-cols-4 '>
+        <div className='container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-x-5'>
           {FilteredProductsByCategory.map((product,key)=>(<>
             <ProductCard key={key} DiscountPrice={product.Price} ProductReviewCount={product.ProductReviewCount} ProductStarCount={product.ProductStarCount} ImageUrl={product.ImageUrl}  ProductTitle={product.ProductTitle} Price={product.DiscountPrice} ProductSizeArray={product.ProductSizeArray}/>
           </>
