@@ -38,6 +38,7 @@ useEffect(() => {
                 src={`${Img && Img.link}`}
                  width={2000}
                  height={753}
+                 priority
                 // fill
                 // sizes="(min-width: 808px) 50vw, 100vw"
                 alt="Picture of the author"
