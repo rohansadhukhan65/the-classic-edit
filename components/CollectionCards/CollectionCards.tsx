@@ -14,6 +14,7 @@ const CollectionCards = () => {
                 width={402}
                 alt={collection.name}
                 className='md:h-[578] md:w-[402]'
+                priority={true}
                 />
                 <p className='text-center mb-10 mt-5 text-2xl font-normal'>{collection.name}</p>
             </div>))}
