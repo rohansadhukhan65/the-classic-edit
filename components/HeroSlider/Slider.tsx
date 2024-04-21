@@ -36,7 +36,7 @@ useEffect(() => {
     <div ref={scope} className={`w-[100%]  ${Class} ${active ? 'block' : 'hidden'}`}>
            {Img? <Image
                 src={`${Img && Img.link}`}
-                 width={3000}
+                 width={2000}
                  height={753}
                 // fill
                 // sizes="(min-width: 808px) 50vw, 100vw"
