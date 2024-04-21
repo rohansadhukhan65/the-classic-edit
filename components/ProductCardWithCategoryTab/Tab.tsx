@@ -20,7 +20,7 @@ const Tab = ({ defaultTab, TabList,children ,currentTab}:Iprop) => {
       <>
 
       {/* tab Header */}
-      <div className='flex justify-center gap-x-14 my-5'>
+      <div className='flex flex-wrap gap-x-5 gap-y-2 justify-center mx-auto ' style={{width:'fit-content'}}>
         {TabList.map((item:any,key:any)=>(<>
             <div onClick={()=>{tabChanger(item)}} className={`cursor-pointer border-b-[2px] hover:border-b-[2px] p-1 hover:border-[#D4A373] ${selectedCategory === item && 'border-[#D4A373]'}`} key={key}>{item}</div>
         </>))}

@@ -4,7 +4,7 @@ import React from 'react'
 
 const CollectionCards = () => {
   return (
-    <div  >
+    <div  className='p-14'>
         <h2 className='text-center text-4xl font-semibold my-5'>All Collection</h2>
         <div className='flex flex-col justify-center items-center md:flex-row md:gap-5'>
             {collections.map((collection,key)=>(<div className='' key={key}>
@@ -15,7 +15,7 @@ const CollectionCards = () => {
                 alt={collection.name}
                 className='md:h-[578] md:w-[402]'
                 />
-                <p className='text-center my-5 text-2xl font-normal'>{collection.name}</p>
+                <p className='text-center mb-10 mt-5 text-2xl font-normal'>{collection.name}</p>
             </div>))}
         </div>
     </div>
