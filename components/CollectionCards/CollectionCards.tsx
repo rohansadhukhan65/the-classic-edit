@@ -7,7 +7,7 @@ const CollectionCards = () => {
     <div  className='p-14'>
         <h2 className='text-center text-4xl font-semibold my-5'>All Collection</h2>
         <div className='flex flex-col justify-center items-center md:flex-row md:gap-5'>
-            {collections.map((collection,key)=>(<div className='' key={key}>
+            {collections && collections.map((collection,key)=>(<div className='' key={key}>
                 <Image
                 src={collection.image}
                 height={578}

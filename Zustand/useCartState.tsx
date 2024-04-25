@@ -1,34 +1,39 @@
 import { Products } from '@/data';
 import {create} from 'zustand'
 
-
-function initCart (){
-    const localCartClone:any =  localStorage.getItem('cart') || '[]' // local cart only stores product id
-    const CartArray =  JSON.parse(localCartClone).map((pid:any)=> Products.find((p)=> p.ProductID === pid))
-    return CartArray || []
+function initCart() {
+    let localCartClone
+    if (typeof window !== 'undefined') {
+     localCartClone = JSON.parse(localStorage.getItem('cart') || '[]');
+    }
+    return localCartClone;
 }
- 
-function UpdateLocalStorage (arrayID:any){
-    localStorage.setItem('cart', JSON.stringify(arrayID));
+
+function updateLocalStorage(cartArray:any) {
+    if (typeof window !== 'undefined') {
+    localStorage.setItem('cart', JSON.stringify(cartArray));
+    }
 }
 
 export const useCartState = create((set) => ({
-    cart : initCart(),
-    isOpen : 0,
-    AddToCart : (pID:any) => set((s :any)=>{
-        UpdateLocalStorage([...s.cart , Products.find((f)=>f.ProductID === pID)])
-        return {cart : [...s.cart , pID]}
+    cart: initCart(),
+    isOpen: 0,
+    AddToCart: (pID:any) => set((s:any) => {
+        const productToAdd = Products.find((f) => f.ProductID === pID);
+        const updatedCart = [...s.cart, productToAdd];
+        updateLocalStorage(updatedCart);
+        return { cart: updatedCart };
     }),
-    RemoveFromCart : (pID:any)=> set((s:any)=>{
-        const NewCart = s.cart.map((p:any)=> p.ProductID !== pID )
-        UpdateLocalStorage(NewCart)
-        return {cart : NewCart}
+    RemoveFromCart: (pID:any) => set((s:any) => {
+        const updatedCart = s.cart.filter((p:any) => p.ProductID !== pID);
+        updateLocalStorage(updatedCart);
+        return { cart: updatedCart };
     }),
-
-    cartDisplayHandler : ()=> set((s:any)=>{
-        return {isOpen : s.isOpen > 0 ? 0 : 390}
+    cartDisplayHandler: () => set((s:any) => {
+        return { isOpen: s.isOpen > 0 ? 0 : 390 };
     })
-})) 
+}));
+
 
 
  
