@@ -39,12 +39,11 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,Produc
   return (
     <>
       <div className='flex flex-col w-[170px] md:w-[200px]  gap-y-3 m-3 mx-auto'>
-        <div>
+        <div className='h-[320px] w-[238px] relative '>
             {/* Image */}
             <Image
                 src={`${ImageUrl}`}
-                height={320}
-                width={238}
+                fill={true}
                 alt='Product'
                 sizes="(min-width: 808px) 50vw, 100vw"
                 className='rounded-md md:h-[320px] h-[250px] w-auto'
