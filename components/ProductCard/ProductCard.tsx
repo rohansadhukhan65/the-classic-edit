@@ -39,7 +39,7 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,Produc
   return (
     <>
       <div className='flex flex-col w-[170px] md:w-[200px]  gap-y-3 m-3 mx-auto'>
-        <div className='h-[320px] w-[238px] relative '>
+        <div className='h-[320px] w-auto relative '>
             {/* Image */}
             <Image
                 src={`${ImageUrl}`}
