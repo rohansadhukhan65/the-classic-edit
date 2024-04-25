@@ -7,11 +7,11 @@ import SizeSelector from '../SizeSelector/SizeSelector'
 import AddToCartButton from '../AddToCartButton/AddToCartButton'
 
 interface Iprop{
-  ProductID?: string;
+  ProductID: string;
   ImageUrl : string;
   Price: number;
   DiscountPrice: number;
-  ProductTitle?: string;
+  ProductTitle: string;
   ProductReviewCount: number;
   ProductStarCount: number;
   ProductSizeArray?: any;
@@ -49,9 +49,9 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,Produc
                 className='rounded-md md:h-[320px] h-[270px] w-auto'
             />
         </div>
-        <div className='flex flex-col md:flex-row gap-x-3 items-start md:items-center justify-start'>
+        <div className='flex flex-col gap-x-3 items-start justify-start'>
             {/* price */}
-            <p className='text-xl'>₹{Price}</p>
+            <p className='text-xl font-semibold'>₹{Price}</p>
             <p className='flex gap-x-2 text-gray-600 text-sm'>
               <del>₹{DiscountPrice}</del>
               <span className='text-green-500'>{calculateDiscount(DiscountPrice,Price)}% OFF</span>
@@ -59,7 +59,7 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,Produc
         </div>
         <div>
             {/* Product Title */}
-            <div className='font-semibold'>{ProductTitle}</div>
+            <div className='font-semibold'>{ProductTitle.substring(0, 18)} {ProductTitle?.length > 18 ? ' ...':''}</div>
         </div>
         <div>
             {/* review star */}
@@ -71,7 +71,7 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,Produc
         </div>
         <div>
             {/* Add to Cart Button */}
-            <AddToCartButton/>
+            <AddToCartButton productID={ProductID}/>
         </div>
       </div>
     </>

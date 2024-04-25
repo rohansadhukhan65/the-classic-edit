@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Cinzel } from "next/font/google";
 import './global.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Cinzel({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "The Classic Edit",

@@ -1,3 +1,4 @@
+'use client'
 // Components .....
 import FlashSalesBar from "@/components/FlashSalesBar/FlashSalesBar";
 import UserLayout from "../components/UserLayout";
@@ -11,7 +12,11 @@ import Breathable from "@/components/Icons/Breathable";
 import QuickDry from "@/components/Icons/QuickDry";
 import Streachable from "@/components/Icons/Streachable";
 
+ 
+ 
+
 export default function Home() {
+     
   return (
   <UserLayout>
     <FlashSalesBar/>
@@ -19,13 +24,13 @@ export default function Home() {
       <HeroSlider/>
 
       {/* Tabs Section */}
-      <div className="w-full lg:px-14 my-10">
+      <div className="w-full lg:px-14 my-10 flex flex-col items-center flex-wrap">
         <div className="text-center text-5xl font-semibold my-5">Bestsellers</div>
         <ProductCardWithCategoryTab/>
       </div>
 
       {/* Collection Showcase */}
-      <div className="w-full lg:px-14 my-10">
+      <div className="w-full lg:px-14 my-10 flex flex-col items-center flex-wrap">
         <CollectionCards/>
       </div>
 
@@ -50,11 +55,12 @@ export default function Home() {
 
 
       {/* Tab Section 2 */}
-      <div className="w-full lg:px-14 my-10">
+      <div className="w-full lg:px-14 my-10 flex flex-col items-center flex-wrap">
         <div className="text-center text-5xl font-semibold my-5">New Arrivals</div>
         <ProductCardWithCategoryTab/>
       </div>
-      
+
+ 
     <Footer/>
   </UserLayout>
   );
