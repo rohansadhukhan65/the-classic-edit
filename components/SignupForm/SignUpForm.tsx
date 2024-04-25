@@ -5,10 +5,19 @@ import LoginUserIcon from '../Icons/LoginUserIcon'
 import PasswordIcon from '../Icons/PasswordIcon'
 import EmailIcon from '../Icons/EmailIcon'
 import PasswordReEnterIcon from '../Icons/PasswordReEnterIcon'
+import { motion } from 'framer-motion'
+
+
+// variants 
+const variants = {
+  hidden: { opacity: 0 },
+  enter: { opacity: 1 }
+}
 
 const SignUpForm = () => {
   return (
-    <>
+    <motion.main variants={variants} initial='hidden' animate='enter' transition={{ type: 'liner', delay: 0.2, duration: 0.4 }}>
+
       {/* Full Name */}
       <div className='relative flex bg-white shadow-lg rounded-lg items-center w-full my-5'>
         <label className='absolute pl-3'>
@@ -52,7 +61,7 @@ const SignUpForm = () => {
       <div className='bg-gray-900 w-1/1 m-auto text-white text-center rounded-lg py-3 flex justify-center items-center gap-x-3'>
       <WhiteUserIconPluse/>  Sign in
       </div>
-    </>
+    </motion.main>
   )
 }
 

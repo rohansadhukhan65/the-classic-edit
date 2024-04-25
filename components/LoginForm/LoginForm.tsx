@@ -3,11 +3,21 @@ import LoginUserIcon from '../Icons/LoginUserIcon'
 import PasswordIcon from '../Icons/PasswordIcon'
 import Link from 'next/link'
 import WhiteLoginIcon from '../Icons/WhiteLoginIcon'
- 
+import { motion } from 'framer-motion'
+
+
+// variants 
+const variants = {
+  hidden: { opacity: 0 },
+  enter: { opacity: 1 }
+}
+
 
 const LoginForm = ({signupToggler}:any) => {
   return (
-    <>
+    <motion.main variants={variants} initial='hidden' animate='enter' transition={{ type: 'liner', delay: 0.2, duration: 0.4 }}>
+
+
       {/* User ID */}
       <div className='relative flex bg-white shadow-lg rounded-lg items-center w-full my-5'>
         <label className='absolute pl-3'>
@@ -46,7 +56,8 @@ const LoginForm = ({signupToggler}:any) => {
       <div className='p-5 shadow-lg rounded-lg bg-white mt-14 mb-14'>
         <p>Dont have an account ? <span className='font-bold text-black cursor-pointer' onClick={signupToggler}>Sign Up</span></p>
       </div>
-    </>
+    </motion.main>
+    
   )
 }
 
