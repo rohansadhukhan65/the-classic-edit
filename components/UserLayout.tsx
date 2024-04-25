@@ -1,7 +1,11 @@
 'use client'
-import useScrollProgress from '@/hooks/useScrollProgress'
+import useScrollProgress from '@/Hooks/useScrollProgress'
 import React from 'react'
 import { motion } from 'framer-motion'
+import CartDrawer from './CartDrawer/CartDrawer'
+import Head from 'next/head'
+ 
+ 
 
 
 // variants 
@@ -17,12 +21,20 @@ interface Iprop {
 export default function UserLayout({children}:Iprop) {
   const completion = useScrollProgress()
   return (
-    <motion.main variants={variants} initial='hidden' animate='enter' transition={{ type: 'liner', delay: 0.2, duration: 0.4 }}>
+      <motion.main variants={variants} initial='hidden' animate='enter' transition={{ type: 'liner', delay: 0.2, duration: 0.4 }}>
+      
+      <Head>
+        {/* Specify the favicon */}
+        <link rel="shortcut icon" href="/Crown.ioc" type="image/x-icon" />
+        <link rel="icon" href="/Crown.ioc" type="image/x-icon" />
+      </Head>
+        {children}
     
-      {children}
-  
-    {/* COMPLETION BAR */}
-    <span style={{transform:`translateY(${completion - 100}%)`}} className='fixed z-50 bg-black w-1 top-0 right-0 bottom-0 transition-all duration-700'></span>
-    </motion.main>
+      {/* CART DRAWER */}
+      <CartDrawer/>
+      {/* COMPLETION BAR */}
+      <span style={{transform:`translateY(${completion - 100}%)`}} className='fixed z-50 bg-black w-1 top-0 right-0 bottom-0 transition-all duration-700'></span>
+      </motion.main>
+    
   )
 }

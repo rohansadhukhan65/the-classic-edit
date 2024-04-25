@@ -38,9 +38,9 @@ useEffect(() => {
                 src={`${Img && Img.link}`}
                  width={2000}
                  height={753}
-                 priority={true}
+               
                 // fill
-                // sizes="(min-width: 808px) 50vw, 100vw"
+                sizes="(min-width: 808px) 50vw, 100vw"
                 alt="Picture of the author"
                 className='md:h-[600px]  h-[500px]'
             /> :''  }
