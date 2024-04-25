@@ -47,7 +47,7 @@ export default function HeroSlider() {
 
             {/* Sliders */}
             <div className="flex w-[100%]">
-            {SlidersArray.map((slide,key) => {
+            {SlidersArray && SlidersArray.map((slide,key) => {
                 return <Slider   Img={slide.Image} SlideKey={key + 1} key={key} ActiveIndex={ActiveIndex}>
                     <div className="absolute top-[55%] md:top-[20%] left-[15%]">
                         <h1 className="text-white md:font-semibold text-4xl md:text-6xl md:my-5">Suit up for</h1>
@@ -66,7 +66,7 @@ export default function HeroSlider() {
 
             {/* Dots */}
             <div className="absolute flex justify-center items-center w-[100%] bottom-6 gap-x-2">
-                {SlidersArray.map((slide,key)=> <Dots key={key} isActive={ActiveIndex=== (key +1)?true:false}/>)}
+                {SlidersArray && SlidersArray.map((slide,key)=> <Dots key={key} isActive={ActiveIndex=== (key +1)?true:false}/>)}
             </div>
         </div>
       );

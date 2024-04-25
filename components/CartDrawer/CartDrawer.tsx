@@ -5,8 +5,7 @@ import RightArrowIcon from '../Icons/RightArrowIcon'
 
 const CartDrawer = () => {
     const{isOpen,cartDisplayHandler,cart}:any= useCartState()
-    console.clear()
-    console.log(cart)
+    
   return (
     <motion.div animate={{ width: isOpen  }} transition={{ delay: 0.3 }} className={`${isOpen ?'':'hidden'} fixed right-0 top-0 z-10 bg-white h-screen shadow-md overflow-hidden`}>
       {/* Cart Header */}
@@ -18,8 +17,8 @@ const CartDrawer = () => {
       </div>
       {/* Cart Body */}
       <div className='px-5'>
-        {cart.map((p:any,k:number)=>(<div key={k}>
-            {''}
+        {cart && cart.map((p:any,k:number)=>(<div key={k}>
+            {p.ProductTitle}
         </div>))}
       </div>
 

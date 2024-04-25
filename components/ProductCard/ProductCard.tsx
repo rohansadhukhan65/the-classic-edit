@@ -60,7 +60,7 @@ const ProductCard = ({ProductID,ImageUrl,Price,DiscountPrice,ProductTitle,Produc
         </div>
         <div>
             {/* Product Title */}
-            <div className='font-semibold'>{ProductTitle.substring(0, 18)} {ProductTitle?.length > 18 ? ' ...':''}</div>
+            <div className='font-semibold'>{ProductTitle.substring(0, 18)} {ProductTitle && ProductTitle?.length > 18 ? ' ...':''}</div>
         </div>
         <div>
             {/* review star */}
