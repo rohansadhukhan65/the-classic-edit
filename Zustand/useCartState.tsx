@@ -30,7 +30,7 @@ export const useCartState = create((set) => ({
         return { cart: updatedCart };
     }),
     cartDisplayHandler: () => set((s:any) => {
-        return { isOpen: s.isOpen > 0 ? 0 : 390 };
+        return { isOpen: s.isOpen > 0 ? 0 : 360 };
     })
 }));
 

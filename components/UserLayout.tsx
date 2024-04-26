@@ -25,8 +25,7 @@ export default function UserLayout({children}:Iprop) {
       
       <Head>
         {/* Specify the favicon */}
-        <link rel="shortcut icon" href="/Crown.ioc" type="image/x-icon" />
-        <link rel="icon" href="/Crown.ioc" type="image/x-icon" />
+        <link rel="shortcut icon" href="/static/favicon.ico" />
       </Head>
         {children}
     
