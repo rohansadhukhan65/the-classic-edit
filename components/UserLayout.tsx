@@ -4,10 +4,10 @@ import React, { lazy, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
 import { useCartState } from '@/Zustand/useCartState'
+import CartDrawer from './CartDrawer/CartDrawer'
 
 
 // Components .....
-const CartDrawer = lazy(()=> import('./CartDrawer/CartDrawer'))
  
 
 
