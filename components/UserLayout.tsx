@@ -34,7 +34,7 @@ export default function UserLayout({children}:Iprop) {
 
 
   return (
-    <React.Suspense fallback={<>Loading .....</>}>
+    <React.Suspense fallback={<div className='h-full w-full flex items-center justify-center'>Loading .....</div>}>
       <motion.main variants={variants} initial='hidden' animate='enter' transition={{ type: 'liner', delay: 0.2, duration: 0.4 }}>
       
       <Head>
