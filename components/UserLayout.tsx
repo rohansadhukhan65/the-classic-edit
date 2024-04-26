@@ -34,7 +34,7 @@ export default function UserLayout({children}:Iprop) {
 
 
   return (
-    <React.Suspense fallback={<div className='h-full w-full flex items-center justify-center'>Loading .....</div>}>
+   
       <motion.main variants={variants} initial='hidden' animate='enter' transition={{ type: 'liner', delay: 0.2, duration: 0.4 }}>
       
       <Head>
@@ -48,7 +48,7 @@ export default function UserLayout({children}:Iprop) {
       {/* COMPLETION BAR */}
       <span style={{transform:`translateY(${completion - 100}%)`}} className='fixed z-50 bg-black w-1 top-0 right-0 bottom-0 transition-all duration-700'></span>
       </motion.main>
-    </React.Suspense>
+   
     
   )
 }
