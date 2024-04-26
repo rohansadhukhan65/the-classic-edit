@@ -16,7 +16,7 @@ const CartDrawer = () => {
     useEffect(()=>{
       cart.map((p:any,)=>setTotalCartPrice(pv => pv + p.Price ))
     },[cart])
-    
+
  
   return (
     <motion.div animate={{ width: isOpen  }} transition={{ delay: 0.3 }} className={`${isOpen ?'':'hidden'} fixed right-0 top-0 z-10 bg-white h-screen shadow-md overflow-hidden`}>
@@ -40,7 +40,7 @@ const CartDrawer = () => {
               {/* Prod Details */}
               <div className='w-1/2'>
                 {/* Product Name */}
-                <p className='font-semibold text-xl'>{p.ProductTitle}</p>
+                <p className='font-semibold text-xl'>{p.ProductTitle.substring(0, 12)} {p.ProductTitle && p.ProductTitle?.length > 12 ? ' ...':''}</p>
                 {/* Size */}
                 <div className='flex gap-x-2'>
                   <p>Size : </p>
