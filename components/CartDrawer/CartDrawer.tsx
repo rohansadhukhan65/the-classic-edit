@@ -40,9 +40,9 @@ const CartDrawer = () => {
 
         {/* Total Pricing */}
         <div className='border-t-[2px] border-b-[2px] border-dashed border-gray-400 my-10 py-5 px-5'>
-        <div className='flex justify-between'><p>Total</p> <p>$ {totalCartPrice && totalCartPrice || 0}</p></div>
-        <div className='flex justify-between'><p>GST</p> <p>$ {totalCartPrice && calculate12Percent(totalCartPrice) || 0}</p></div>
-        <div className='flex justify-between'><p>Total</p> <p>$ {totalCartPrice && totalCartPrice + calculate12Percent(totalCartPrice) || 0}</p></div>
+        <div className='flex justify-between'><p>Total</p> <p>$ {totalCartPrice && Math.round(totalCartPrice) || 0}</p></div>
+        <div className='flex justify-between'><p>GST</p> <p>$ {totalCartPrice && Math.round(calculate12Percent(totalCartPrice)) || 0}</p></div>
+        <div className='flex justify-between'><p>Total</p> <p>$ {totalCartPrice && Math.round(totalCartPrice + calculate12Percent(totalCartPrice)) || 0}</p></div>
         </div>
 
         {/* Payment Button */}

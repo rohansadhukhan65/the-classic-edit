@@ -1,22 +1,16 @@
 import { Products } from '@/data';
 import {create} from 'zustand'
 
-function initCart() {
-    let localCartClone
-    if (typeof window !== 'undefined') {
-     localCartClone = JSON.parse(localStorage.getItem('cart') || '[]');
-    }
-    return localCartClone;
-}
+ 
 
 function updateLocalStorage(cartArray:any) {
-    if (typeof window !== 'undefined') {
-    localStorage.setItem('cart', JSON.stringify(cartArray));
-    }
+    
+    localStorage.setItem('cart', JSON.stringify(cartArray))
+    
 }
 
-export const useCartState = create((set) => ({
-    cart: initCart() || [],
+export const useCartState : any= create((set:any) => ({
+    cart: [] ,
     isOpen: 0,
     AddToCart: (pID:any) => set((s:any) => {
         const productToAdd = Products.find((f) => f.ProductID === pID);
@@ -31,7 +25,11 @@ export const useCartState = create((set) => ({
     }),
     cartDisplayHandler: () => set((s:any) => {
         return { isOpen: s.isOpen > 0 ? 0 : 360 };
+    }),
+    initCart : (initdata:any) => set((s:any)=>{
+        return { cart : initdata}
     })
+    
 }));
 
 

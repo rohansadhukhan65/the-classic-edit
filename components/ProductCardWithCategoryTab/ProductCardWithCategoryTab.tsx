@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Tab from './Tab'
-import ProductCard from '../ProductCard/ProductCard'
+const ProductCard = React.lazy(()=> import('../ProductCard/ProductCard'))
 import { Products, collections } from '@/data'
 
 const ProductCardWithCategoryTab = () => {
@@ -16,9 +16,9 @@ const ProductCardWithCategoryTab = () => {
      <Tab defaultTab={collections[0].name} TabList={collections && collections.map((item) => item.name)} currentTab={(tabName:string)=>{setSelectedTab(tabName)}} >
         <div className='container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-x-5'>
           {FilteredProductsByCategory && FilteredProductsByCategory.map((product,key)=>(
-          <>
-            <ProductCard key={key} ProductID={product.ProductID} DiscountPrice={product.Price} ProductReviewCount={product.ProductReviewCount} ProductStarCount={product.ProductStarCount} ImageUrl={product.ImageUrl}  ProductTitle={product.ProductTitle} Price={product.DiscountPrice} ProductSizeArray={product.ProductSizeArray}/>
-          </>
+          <div key={key}>
+            <ProductCard  ProductID={product.ProductID} DiscountPrice={product.Price} ProductReviewCount={product.ProductReviewCount} ProductStarCount={product.ProductStarCount} ImageUrl={product.ImageUrl}  ProductTitle={product.ProductTitle} Price={product.DiscountPrice} ProductSizeArray={product.ProductSizeArray}/>
+          </div>
           ))}
         </div>
      </Tab>

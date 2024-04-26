@@ -1,18 +1,22 @@
 'use client'
-// Components .....
-import FlashSalesBar from "@/components/FlashSalesBar/FlashSalesBar";
-import UserLayout from "../components/UserLayout";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-import HeroSlider from "@/components/HeroSlider/HeroSlider";
-import ProductCardWithCategoryTab from "@/components/ProductCardWithCategoryTab/ProductCardWithCategoryTab";
-import CollectionCards from "@/components/CollectionCards/CollectionCards";
-import Antistatic from "@/components/Icons/Antistatic";
-import Breathable from "@/components/Icons/Breathable";
-import QuickDry from "@/components/Icons/QuickDry";
-import Streachable from "@/components/Icons/Streachable";
+import React from "react";
 
- 
+
+
+// Lazy Components .....
+const Header = React.lazy(()=> import('../components/Header/Header'))
+const FlashSalesBar = React.lazy(()=> import('../components/FlashSalesBar/FlashSalesBar'))
+const UserLayout = React.lazy(()=> import('../components/UserLayout'))
+const Footer = React.lazy(()=> import('../components/Footer/Footer'))
+const HeroSlider = React.lazy(()=> import('../components/HeroSlider/HeroSlider'))
+const ProductCardWithCategoryTab = React.lazy(()=> import('../components/ProductCardWithCategoryTab/ProductCardWithCategoryTab'))
+const CollectionCards = React.lazy(()=> import('../components/CollectionCards/CollectionCards'))
+
+// Icoon Lazy components .....
+const Antistatic = React.lazy(()=> import('../components/Icons/Antistatic'))
+const Breathable = React.lazy(()=> import('../components/Icons/Breathable'))
+const QuickDry = React.lazy(()=> import('../components/Icons/QuickDry'))
+const Streachable = React.lazy(()=> import('../components/Icons/Streachable'))
  
 
 export default function Home() {

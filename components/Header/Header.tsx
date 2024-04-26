@@ -50,7 +50,7 @@ export default function Header() {
       <div className='flex gap-2'>
         <div className='cursor-pointer'><SearchIcon/></div>
         <Link href={'/login'} className='cursor-pointer'><UserIcon/></Link>
-        <div className='cursor-pointer relative' onClick={cartDisplayHandler}><ShoppingCartIcon/> <span className='absolute flex justify-center items-center top-3 -right-3 bg-gray-950 text-white rounded-full p-3 h-[3px] w-[3px] sm:h-[18px] sm:w-[18px]'>{cart.length  }</span></div>
+        <div className='cursor-pointer relative' onClick={cartDisplayHandler}><ShoppingCartIcon/> <span className='absolute flex justify-center items-center top-3 -right-3 bg-gray-950 text-white rounded-full p-3 h-[3px] w-[3px] sm:h-[18px] sm:w-[18px]'>{ cart.length}</span></div>
         {/* Nav Icon */}
        
       </div>

@@ -1,7 +1,9 @@
-import Footer from '@/components/Footer/Footer'
-import Header from '@/components/Header/Header'
+'use client'
 import React from 'react'
-import UserLayout from './UserLayout'
+
+const UserLayout = React.lazy(()=> import('./UserLayout'))
+const Header = React.lazy(()=> import('./Header/Header'))
+const Footer = React.lazy(()=> import('./Footer/Footer'))
 
 
 interface Iprop {
