@@ -16,7 +16,7 @@ function updateLocalStorage(cartArray:any) {
 }
 
 export const useCartState = create((set) => ({
-    cart: initCart(),
+    cart: initCart() || [],
     isOpen: 0,
     AddToCart: (pID:any) => set((s:any) => {
         const productToAdd = Products.find((f) => f.ProductID === pID);
