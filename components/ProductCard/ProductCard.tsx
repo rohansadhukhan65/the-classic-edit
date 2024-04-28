@@ -45,9 +45,9 @@ const ProductCard = ({
 	}
 
 	return (
-		<Link href={`product/${ProductID}`}>
+		<>
 			<div className='flex flex-col w-[170px] md:w-[200px]  gap-y-3 m-3 mx-auto'>
-				<div className='h-[320px] w-auto relative '>
+				<Link href={`product/${ProductID}`} className='h-[320px] w-auto relative '>
 					{/* Image */}
 					<Image
 						src={`${ImageUrl}`}
@@ -56,7 +56,7 @@ const ProductCard = ({
 						sizes='(min-width: 808px) 50vw, 100vw'
 						className='rounded-md md:h-[320px] h-[250px] w-auto'
 					/>
-				</div>
+				</Link>
 				<div className='flex flex-col gap-x-3 items-start justify-start'>
 					{/* price */}
 					<p className='text-xl font-semibold'>₹{Price}</p>
@@ -90,7 +90,7 @@ const ProductCard = ({
 					<AddToCartButton productID={ProductID} />
 				</div>
 			</div>
-		</Link>
+		</>
 	);
 };
 
