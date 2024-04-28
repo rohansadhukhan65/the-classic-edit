@@ -1,9 +1,14 @@
-import React from 'react'
+'use client';
+
+import HeaderFooterWrapperUser from '@/components/HeaderFooterWrapperUser';
+import { useParams } from 'next/navigation';
+import React from 'react';
 
 export default function Page() {
-  return (
-    <div>
-      Product
-    </div>
-  )
+	const { id } = useParams();
+	return (
+		<HeaderFooterWrapperUser>
+			<div className="container">Product {id}</div>
+		</HeaderFooterWrapperUser>
+	);
 }
