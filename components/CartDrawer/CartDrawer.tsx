@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useCartState } from '@/Zustand/useCartState';
 import RightArrowIcon from '../Icons/RightArrowIcon';
 import Image from 'next/image';
+import './CartDrawer.css';
 
 const CartDrawer = () => {
 	const { isOpen, cartDisplayHandler, cart }: any = useCartState();
@@ -20,9 +21,9 @@ const CartDrawer = () => {
 		<motion.div
 			animate={{ width: isOpen }}
 			transition={{ delay: 0.3 }}
-			className={`${isOpen ? '' : 'hidden'} fixed right-0 top-0 z-10 bg-white h-screen shadow-md overflow-hidden`}
+			className={`${isOpen ? '' : 'hidden'} fixed right-0 top-0 z-10 h-full bg-white shadow-md overflow-hidden`}
 		>
-			<div className='relative h-full w-full'>
+			<div className='relative w-full h-full'>
 				{/* Cart Header */}
 				<div className='flex'>
 					<div className='w-full pl-20 flex flex-col justify-center items-center text-3xl'>
@@ -40,7 +41,7 @@ const CartDrawer = () => {
 				{/* Cart Body */}
 
 				{/* Added Products */}
-				<div className='px-5 overflow-y-auto  h-[165px] flex flex-col gap-y-5'>
+				<div className='px-5 overflow-y-auto  h-[165px] flex flex-col gap-y-5 prod-View'>
 					{cart &&
 						cart.map((p: any, k: number) => (
 							<div className='flex gap-x-3 w-full' key={k}>
@@ -114,6 +115,31 @@ const CartDrawer = () => {
 								)) ||
 								0}
 						</p>
+					</div>
+				</div>
+
+				{/* Offers */}
+				<div className='px-4 flex relative flex-col justify-center'>
+					<p className='text-xl font-normal mb-5'>Offers</p>
+					{/* offer Card */}
+					<div className='flex'>
+						<Image
+							src={'/offer.png'}
+							height={60}
+							width={60}
+							alt='The Classic Edit'
+						/>
+						<div className='flex flex-col justify-start items-start px-3'>
+							<p className='text-lg font-semibold'>SBI Offer</p>
+							<p className='text-sm text-gray-600'>
+								Valid only for SBI customer
+							</p>
+						</div>
+						<div className='flex flex-col justify-center items-center'>
+							<span className='font-bold bg-gray-200 px-2 py-1 rounded-lg shadow-sm'>
+								Apply
+							</span>
+						</div>
 					</div>
 				</div>
 

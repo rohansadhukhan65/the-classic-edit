@@ -1,0 +1,15 @@
+/* Custom scrollbar styles */
+/* For webkit based browsers */
+.prod-View::-webkit-scrollbar {
+	width: 5px;
+}
+.prod-View::-webkit-scrollbar-track {
+	background: transparent;
+}
+.prod-View::-webkit-scrollbar-thumb {
+	background: #000000;
+	border-radius: 2px;
+}
+.prod-View::-webkit-scrollbar-thumb:hover {
+	background: #000000;
+}
