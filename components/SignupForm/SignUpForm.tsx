@@ -73,10 +73,7 @@ const SignUpForm = () => {
 					className='h-6 w-6 border border-gray-400 rounded checked:bg-gray-500 checked:border-transparent mr-2'
 				/>
 				<label>
-					Accept{' '}
-					<span className='font-semibold'>
-						Terms & Condition
-					</span>
+					Accept <span className='font-semibold'>Terms & Condition</span>
 				</label>
 			</div>
 

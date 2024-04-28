@@ -18,9 +18,7 @@ const ProductCardWithCategoryTab = () => {
 		<>
 			<Tab
 				defaultTab={collections[0].name}
-				TabList={
-					collections && collections.map((item) => item.name)
-				}
+				TabList={collections && collections.map((item) => item.name)}
 				currentTab={(tabName: string) => {
 					setSelectedTab(tabName);
 				}}
@@ -32,18 +30,12 @@ const ProductCardWithCategoryTab = () => {
 								<ProductCard
 									ProductID={product.ProductID}
 									DiscountPrice={product.Price}
-									ProductReviewCount={
-										product.ProductReviewCount
-									}
-									ProductStarCount={
-										product.ProductStarCount
-									}
+									ProductReviewCount={product.ProductReviewCount}
+									ProductStarCount={product.ProductStarCount}
 									ImageUrl={product.ImageUrl}
 									ProductTitle={product.ProductTitle}
 									Price={product.DiscountPrice}
-									ProductSizeArray={
-										product.ProductSizeArray
-									}
+									ProductSizeArray={product.ProductSizeArray}
 								/>
 							</div>
 						))}

@@ -22,12 +22,8 @@ const Login = () => {
 								setLoginFrm(true);
 							}}
 						>
-							{isLoginFrm ? (
-								<WhiteUserIcon />
-							) : (
-								<BlackUserIcon />
-							)}{' '}
-							Sign in
+							{isLoginFrm ? <WhiteUserIcon /> : <BlackUserIcon />} Sign
+							in
 						</button>
 						<button
 							className={`transition-all duration-500 flex gap-x-1 sm:gap-x-5 justify-center items-center ${!isLoginFrm ? 'text-sm sm:text-xl shadow-md font-semibold border-none  px-10 py-3 text-white bg-gray-900 rounded-lg' : 'text-sm sm:text-xl font-semibold border-none px-10 py-3 text-black rounded-lg'}`}

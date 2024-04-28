@@ -35,15 +35,13 @@ export default function Home() {
 			{/* Into About Section */}
 			<div className='w-full bg-[#FFE9D3] py-10 px-5 text-center'>
 				<div className='text-center text-xl md:text-4xl my-5'>
-					Why{' '}
-					<span className='font-bold'>The Classic Edit?</span>
+					Why <span className='font-bold'>The Classic Edit?</span>
 				</div>
 				<p className='md:w-[647px] mx-auto'>
-					Lorem ipsum dolor sit amet, consectetur adipiscing
-					elit, sed do eiusmod tempor incididunt ut labore et
-					dolore magna aliqua. Lorem ipsum dolor sit amet,
-					consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore et dolore magna aliqua.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+					ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
 				</p>
 
 				{/* Icons */}

@@ -27,10 +27,7 @@ const ProductCard = ({
 	ProductStarCount,
 	ProductSizeArray,
 }: Iprop) => {
-	function calculateDiscount(
-		originalPrice: number,
-		discountedPrice: number,
-	) {
+	function calculateDiscount(originalPrice: number, discountedPrice: number) {
 		// Check if prices are valid
 		if (originalPrice <= 0 || discountedPrice <= 0) {
 			throw new Error('Prices must be greater than zero.');
@@ -66,8 +63,7 @@ const ProductCard = ({
 					<p className='flex gap-x-2 text-gray-600 text-sm'>
 						<del>₹{DiscountPrice}</del>
 						<span className='text-green-500'>
-							{calculateDiscount(DiscountPrice, Price)}%
-							OFF
+							{calculateDiscount(DiscountPrice, Price)}% OFF
 						</span>
 					</p>
 				</div>
@@ -75,9 +71,7 @@ const ProductCard = ({
 					{/* Product Title */}
 					<div className='font-semibold'>
 						{ProductTitle.substring(0, 18)}{' '}
-						{ProductTitle && ProductTitle?.length > 18
-							? ' ...'
-							: ''}
+						{ProductTitle && ProductTitle?.length > 18 ? ' ...' : ''}
 					</div>
 				</div>
 				<div>

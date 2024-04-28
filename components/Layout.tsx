@@ -23,9 +23,7 @@ export default function Layout({ children }: Iprop) {
 	const completion = useScrollProgress();
 
 	useEffect(() => {
-		const localCartClone = JSON.parse(
-			localStorage.getItem('cart') || '[]',
-		);
+		const localCartClone = JSON.parse(localStorage.getItem('cart') || '[]');
 		initCart(localCartClone);
 	}, [initCart]);
 

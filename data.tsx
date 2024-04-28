@@ -102,8 +102,7 @@ export const Products = [
 	{
 		ProductID: '6',
 		ProductTitle: 'Plaid Business Suit',
-		description:
-			'A stylish plaid business suit for professional settings.',
+		description: 'A stylish plaid business suit for professional settings.',
 		Price: 279,
 		currency: 'USD',
 		category: 'Suits',
@@ -225,8 +224,7 @@ export const Products = [
 	{
 		ProductID: '12',
 		ProductTitle: 'Striped Business Suit',
-		description:
-			'A classic striped business suit for professional settings.',
+		description: 'A classic striped business suit for professional settings.',
 		Price: 289,
 		currency: 'USD',
 		category: 'Suits',
@@ -303,8 +301,7 @@ export const collections = [
 	},
 	{
 		name: 'Formal',
-		description:
-			'Elegant tuxedos and formal suits for special occasions.',
+		description: 'Elegant tuxedos and formal suits for special occasions.',
 		image: '/Img/CollectionImages/formal-collection.jpg',
 	},
 	{

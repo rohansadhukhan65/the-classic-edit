@@ -83,9 +83,7 @@ export default function HeroSlider() {
 					SlidersArray.map((slide, key) => (
 						<Dots
 							key={key}
-							isActive={
-								ActiveIndex === key + 1 ? true : false
-							}
+							isActive={ActiveIndex === key + 1 ? true : false}
 						/>
 					))}
 			</div>

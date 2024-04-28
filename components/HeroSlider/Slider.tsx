@@ -31,11 +31,7 @@ export default function Slider({
 	useEffect(() => {
 		if (ActiveIndex === SlideKey) {
 			setActive(true);
-			animate(
-				scope.current,
-				{ opacity: 1, x: 0 },
-				{ delay: stagger(0.5) },
-			);
+			animate(scope.current, { opacity: 1, x: 0 }, { delay: stagger(0.5) });
 		} else {
 			setActive(false);
 			animate(

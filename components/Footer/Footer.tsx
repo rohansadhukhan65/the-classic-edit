@@ -34,9 +34,7 @@ export default function Footer() {
 					<p className='text-3xl font-semibold'>Stay in touch</p>
 					<p>Notify Me On The Next The Classic Edit Event!</p>
 					<div className='flex flex-col gap-3'>
-						<p className='text-3xl font-semibold'>
-							Social Media
-						</p>
+						<p className='text-3xl font-semibold'>Social Media</p>
 						<div className='w-full flex gap-x-4'>
 							<span>
 								<FaceBookIcon />

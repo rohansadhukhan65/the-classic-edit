@@ -12,8 +12,7 @@ export default function useScrollProgress(): number {
 
 			if (scrollHeight) {
 				setCompletion(
-					Number((currentProgress / scrollHeight).toFixed(2)) *
-						100,
+					Number((currentProgress / scrollHeight).toFixed(2)) * 100,
 				);
 			}
 		};

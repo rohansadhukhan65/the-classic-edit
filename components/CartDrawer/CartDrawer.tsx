@@ -58,21 +58,15 @@ const CartDrawer = () => {
 								<div className='w-1/2'>
 									{/* Product Name */}
 									<p className='font-semibold text-xl'>
-										{p.ProductTitle.substring(
-											0,
-											12,
-										)}{' '}
-										{p.ProductTitle &&
-										p.ProductTitle?.length > 12
+										{p.ProductTitle.substring(0, 12)}{' '}
+										{p.ProductTitle && p.ProductTitle?.length > 12
 											? ' ...'
 											: ''}
 									</p>
 									{/* Size */}
 									<div className='flex gap-x-2'>
 										<p>Size : </p>
-										<p className='bg-gray-300 rounded-lg px-1'>
-											M
-										</p>
+										<p className='bg-gray-300 rounded-lg px-1'>M</p>
 									</div>
 									{/* Price Qunatity */}
 									<div className='flex justify-between w-full'>
@@ -83,9 +77,7 @@ const CartDrawer = () => {
 												+
 											</div>
 											{/* qty */}
-											<div className='mx-2'>
-												1
-											</div>
+											<div className='mx-2'>1</div>
 											{/* - */}
 											<div className='px-2 rounded-lg bg-gray-300'>
 												-
@@ -101,21 +93,14 @@ const CartDrawer = () => {
 				<div className='border-t-[2px] border-b-[2px] border-dashed border-gray-400 my-10 py-5 px-5'>
 					<div className='flex justify-between'>
 						<p>Total</p>{' '}
-						<p>
-							${' '}
-							{(totalCartPrice &&
-								Math.round(totalCartPrice)) ||
-								0}
-						</p>
+						<p>$ {(totalCartPrice && Math.round(totalCartPrice)) || 0}</p>
 					</div>
 					<div className='flex justify-between'>
 						<p>GST</p>{' '}
 						<p>
 							${' '}
 							{(totalCartPrice &&
-								Math.round(
-									calculate12Percent(totalCartPrice),
-								)) ||
+								Math.round(calculate12Percent(totalCartPrice))) ||
 								0}
 						</p>
 					</div>
@@ -125,10 +110,7 @@ const CartDrawer = () => {
 							${' '}
 							{(totalCartPrice &&
 								Math.round(
-									totalCartPrice +
-										calculate12Percent(
-											totalCartPrice,
-										),
+									totalCartPrice + calculate12Percent(totalCartPrice),
 								)) ||
 								0}
 						</p>
@@ -139,9 +121,7 @@ const CartDrawer = () => {
 				<div className='absolute bottom-0 flex justify-around w-full h-16'>
 					<div>
 						<div className='text-sm'>Payment By</div>
-						<div className='font-semibold'>
-							Cash on Delivery
-						</div>
+						<div className='font-semibold'>Cash on Delivery</div>
 					</div>
 					<div>
 						<button className='bg-black text-white px-5 py-2 rounded-md'>

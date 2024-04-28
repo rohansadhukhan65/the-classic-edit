@@ -17,9 +17,7 @@ export const useCartState: any = create((set: any) => ({
 		}),
 	RemoveFromCart: (pID: any) =>
 		set((s: any) => {
-			const updatedCart = s.cart.filter(
-				(p: any) => p.ProductID !== pID,
-			);
+			const updatedCart = s.cart.filter((p: any) => p.ProductID !== pID);
 			updateLocalStorage(updatedCart);
 			return { cart: updatedCart };
 		}),
