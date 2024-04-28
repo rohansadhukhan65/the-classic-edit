@@ -7,7 +7,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"format": "npx prettier ./components --write"
+		"format": "npx prettier . --write"
 	},
 	"dependencies": {
 		"framer-motion": "^11.1.3",

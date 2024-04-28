@@ -14,7 +14,7 @@ const SizeSelector = ({ sizes, onSelect }: Iprop) => {
 
 	return (
 		<>
-			<div className="flex">
+			<div className='flex'>
 				{sizes &&
 					sizes.map((size: any, key: number) => (
 						<div

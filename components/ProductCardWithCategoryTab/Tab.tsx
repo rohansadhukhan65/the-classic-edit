@@ -18,7 +18,7 @@ const Tab = ({ defaultTab, TabList, children, currentTab }: Iprop) => {
 		<>
 			{/* tab Header */}
 			<div
-				className="flex flex-wrap gap-x-5 gap-y-2 justify-center mx-auto "
+				className='flex flex-wrap gap-x-5 gap-y-2 justify-center mx-auto '
 				style={{ width: 'fit-content' }}
 			>
 				{TabList &&
@@ -36,7 +36,7 @@ const Tab = ({ defaultTab, TabList, children, currentTab }: Iprop) => {
 			</div>
 
 			{/* Tab content */}
-			<div className="container flex flex-col justify-center items-center">
+			<div className='container flex flex-col justify-center items-center'>
 				{children}
 			</div>
 		</>

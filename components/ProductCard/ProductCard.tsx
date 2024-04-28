@@ -49,23 +49,23 @@ const ProductCard = ({
 
 	return (
 		<Link href={`product/${ProductID}`}>
-			<div className="flex flex-col w-[170px] md:w-[200px]  gap-y-3 m-3 mx-auto">
-				<div className="h-[320px] w-auto relative ">
+			<div className='flex flex-col w-[170px] md:w-[200px]  gap-y-3 m-3 mx-auto'>
+				<div className='h-[320px] w-auto relative '>
 					{/* Image */}
 					<Image
 						src={`${ImageUrl}`}
 						fill={true}
-						alt="Product"
-						sizes="(min-width: 808px) 50vw, 100vw"
-						className="rounded-md md:h-[320px] h-[250px] w-auto"
+						alt='Product'
+						sizes='(min-width: 808px) 50vw, 100vw'
+						className='rounded-md md:h-[320px] h-[250px] w-auto'
 					/>
 				</div>
-				<div className="flex flex-col gap-x-3 items-start justify-start">
+				<div className='flex flex-col gap-x-3 items-start justify-start'>
 					{/* price */}
-					<p className="text-xl font-semibold">₹{Price}</p>
-					<p className="flex gap-x-2 text-gray-600 text-sm">
+					<p className='text-xl font-semibold'>₹{Price}</p>
+					<p className='flex gap-x-2 text-gray-600 text-sm'>
 						<del>₹{DiscountPrice}</del>
-						<span className="text-green-500">
+						<span className='text-green-500'>
 							{calculateDiscount(DiscountPrice, Price)}%
 							OFF
 						</span>
@@ -73,7 +73,7 @@ const ProductCard = ({
 				</div>
 				<div>
 					{/* Product Title */}
-					<div className="font-semibold">
+					<div className='font-semibold'>
 						{ProductTitle.substring(0, 18)}{' '}
 						{ProductTitle && ProductTitle?.length > 18
 							? ' ...'

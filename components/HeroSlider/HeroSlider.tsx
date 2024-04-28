@@ -38,9 +38,9 @@ export default function HeroSlider() {
 	};
 
 	return (
-		<div className="relative">
+		<div className='relative'>
 			{/* Sliders */}
-			<div className="flex w-[100%]">
+			<div className='flex w-[100%]'>
 				{SlidersArray &&
 					SlidersArray.map((slide, key) => {
 						return (
@@ -50,14 +50,14 @@ export default function HeroSlider() {
 								key={key}
 								ActiveIndex={ActiveIndex}
 							>
-								<div className="absolute top-[55%] md:top-[20%] left-[15%]">
-									<h1 className="text-white md:font-semibold text-4xl md:text-6xl md:my-5">
+								<div className='absolute top-[55%] md:top-[20%] left-[15%]'>
+									<h1 className='text-white md:font-semibold text-4xl md:text-6xl md:my-5'>
 										Suit up for
 									</h1>
-									<h1 className="text-white md:font-semibold text-4xl md:text-6xl md:my-5">
+									<h1 className='text-white md:font-semibold text-4xl md:text-6xl md:my-5'>
 										Success
 									</h1>
-									<button className="bg-white rounded-sm px-5 md:px-9 py-2 text-sm md:text-xl font-semibold  my-5">
+									<button className='bg-white rounded-sm px-5 md:px-9 py-2 text-sm md:text-xl font-semibold  my-5'>
 										SHOP NOW
 									</button>
 								</div>
@@ -67,18 +67,18 @@ export default function HeroSlider() {
 			</div>
 
 			{/* Arrows */}
-			<div className="absolute flex justify-between w-[100%] top-[45%] md:top-[50%] right-[50%] transform translate-x-[50%]">
-				<button onClick={LeftHandler} className="mx-10">
+			<div className='absolute flex justify-between w-[100%] top-[45%] md:top-[50%] right-[50%] transform translate-x-[50%]'>
+				<button onClick={LeftHandler} className='mx-10'>
 					<LeftArrowIcon />
 				</button>
-				<button onClick={RightHandler} className="mx-10">
+				<button onClick={RightHandler} className='mx-10'>
 					{' '}
 					<RightArrowIcon />
 				</button>
 			</div>
 
 			{/* Dots */}
-			<div className="absolute flex justify-center items-center w-[100%] bottom-6 gap-x-2">
+			<div className='absolute flex justify-center items-center w-[100%] bottom-6 gap-x-2'>
 				{SlidersArray &&
 					SlidersArray.map((slide, key) => (
 						<Dots

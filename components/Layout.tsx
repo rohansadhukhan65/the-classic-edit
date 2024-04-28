@@ -32,13 +32,13 @@ export default function Layout({ children }: Iprop) {
 	return (
 		<motion.main
 			variants={variants}
-			initial="hidden"
-			animate="enter"
+			initial='hidden'
+			animate='enter'
 			transition={{ type: 'liner', delay: 0.2, duration: 0.4 }}
 		>
 			<Head>
 				{/* Specify the favicon */}
-				<link rel="shortcut icon" href="/static/favicon.ico" />
+				<link rel='shortcut icon' href='/static/favicon.ico' />
 			</Head>
 			{children}
 
@@ -47,7 +47,7 @@ export default function Layout({ children }: Iprop) {
 			{/* COMPLETION BAR */}
 			<span
 				style={{ transform: `translateY(${completion - 100}%)` }}
-				className="fixed z-50 bg-black w-1 top-0 right-0 bottom-0 transition-all duration-700"
+				className='fixed z-50 bg-black w-1 top-0 right-0 bottom-0 transition-all duration-700'
 			></span>
 		</motion.main>
 	);

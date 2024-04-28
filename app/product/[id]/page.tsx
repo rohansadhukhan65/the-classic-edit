@@ -8,7 +8,7 @@ export default function Page() {
 	const { id } = useParams();
 	return (
 		<HeaderFooterWrapperUser>
-			<div className="container">Product {id}</div>
+			<div className='container'>Product {id}</div>
 		</HeaderFooterWrapperUser>
 	);
 }

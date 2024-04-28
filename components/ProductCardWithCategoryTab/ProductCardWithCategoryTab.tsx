@@ -25,7 +25,7 @@ const ProductCardWithCategoryTab = () => {
 					setSelectedTab(tabName);
 				}}
 			>
-				<div className="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-x-5">
+				<div className='container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-x-5'>
 					{FilteredProductsByCategory &&
 						FilteredProductsByCategory.map((product, key) => (
 							<div key={key}>
@@ -49,8 +49,8 @@ const ProductCardWithCategoryTab = () => {
 						))}
 				</div>
 			</Tab>
-			<div className="text-center my-5">
-				<button className="py-2 bg-gray-950 text-white px-6 rounded-md hover:bg-gray-800 transition-all duration-200">
+			<div className='text-center my-5'>
+				<button className='py-2 bg-gray-950 text-white px-6 rounded-md hover:bg-gray-800 transition-all duration-200'>
 					View All{' '}
 				</button>
 			</div>

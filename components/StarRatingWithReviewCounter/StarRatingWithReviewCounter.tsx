@@ -27,9 +27,9 @@ const StarRatingWithReviewCounter = ({ reviewCount, fullStar }: Iprop) => {
 	}
 
 	return (
-		<div className="flex gap-x-2">
+		<div className='flex gap-x-2'>
 			{/* Stars */}
-			<div className="flex">{stars}</div>
+			<div className='flex'>{stars}</div>
 
 			{/* Reviw count */}
 			<p>({reviewCount})</p>

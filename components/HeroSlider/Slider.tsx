@@ -58,9 +58,9 @@ export default function Slider({
 					height={753}
 					priority={SlideKey == 1 ? true : false}
 					// fill
-					sizes="(min-width: 808px) 50vw, 100vw"
-					alt="Picture of the author"
-					className="md:h-[600px]  h-[500px]"
+					sizes='(min-width: 808px) 50vw, 100vw'
+					alt='Picture of the author'
+					className='md:h-[600px]  h-[500px]'
 				/>
 			) : (
 				''
