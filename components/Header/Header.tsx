@@ -30,7 +30,7 @@ export default function Header() {
 
 	return (
 		<nav
-			className={`bg-[#F5F0EB] w-full ${isScrolled ? 'fixed top-0 shadow-md' : ''} flex justify-around items-center h-[80px] z-10`}
+			className={`bg-[#F5F0EB] w-full ${isScrolled ? 'fixed top-0 shadow-md' : ''} flex justify-between items-center h-[60px] sm:h-[80px] z-10 px-5`}
 		>
 			{/* Logo & Mobile Nav */}
 			<div className='flex gap-x-6'>

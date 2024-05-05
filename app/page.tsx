@@ -20,7 +20,7 @@ export default function Home() {
 			<HeroSlider />
 
 			{/* Tabs Section */}
-			<div className='w-full lg:px-14 my-10 flex flex-col items-center flex-wrap'>
+			<div className='w-full px-3 lg:px-14 my-10 flex flex-col items-center flex-wrap'>
 				<div className='text-center text-5xl font-semibold my-5'>
 					Bestsellers
 				</div>
@@ -62,7 +62,7 @@ export default function Home() {
 			</div>
 
 			{/* Tab Section 2 */}
-			<div className='w-full lg:px-14 my-10 flex flex-col items-center flex-wrap'>
+			<div className='w-full px-3 lg:px-14 my-10 flex flex-col items-center flex-wrap'>
 				<div className='text-center text-5xl font-semibold my-5'>
 					New Arrivals
 				</div>
