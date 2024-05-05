@@ -7,7 +7,7 @@ export const Products = [
 		currency: 'USD',
 		category: 'Suits',
 		collection: 'Classic',
-		ImageUrl: '/Img/productImages/classic-navy-suit.jpg',
+		ImageUrl: '/Img/productImages/double-breasted-pinstripe-suit.png',
 		images: [
 			'/Img/productImages/prodOne.png',
 			'https://example.com/classic-navy-suit2.jpg',
