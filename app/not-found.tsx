@@ -7,7 +7,7 @@ const CollectionCards = dynamic(
 const NotFound = () => {
 	return (
 		<div>
-            <p className='text-5xl text-center mt-24 font-bold'>OOps ! Sorry could not Find your path !</p>
+            <p className='text-5xl text-red-400 text-center mt-24 font-bold'>OOps ! Sorry could not Find your path !</p>
 			<div className='w-full lg:px-14 my-10 flex flex-col items-center flex-wrap'>
 				<CollectionCards />
 			</div>
