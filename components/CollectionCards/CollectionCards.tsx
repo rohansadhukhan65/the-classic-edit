@@ -1,17 +1,18 @@
 import { collections } from '@/data';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const CollectionCards = () => {
 	return (
 		<div className='p-14'>
 			<h2 className='text-center text-4xl font-semibold my-5'>
-				All Collection
+				 Collection's
 			</h2>
 			<div className='flex flex-col justify-center items-center md:flex-row md:gap-5'>
 				{collections &&
-					collections.map((collection, key) => (
-						<div className='' key={key}>
+					collections.slice(0,3).map((collection, key) => (
+						<Link  href={`/collection/${collection.name}`} className='' key={key}>
 							<Image
 								src={collection.image}
 								height={578}
@@ -23,7 +24,7 @@ const CollectionCards = () => {
 							<p className='text-center mb-10 mt-5 text-2xl font-normal'>
 								{collection.name}
 							</p>
-						</div>
+						</Link>
 					))}
 			</div>
 		</div>
