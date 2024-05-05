@@ -44,7 +44,9 @@ export default function CountDownTimer({ hr, timerTitle }: Iprops) {
 
 	return (
 		<div className='flex items-center'>
-			<span className='text-white font-[15px] sm:font-[18px]'>{timerTitle}</span>
+			<span className='text-white font-[15px] sm:font-[18px]'>
+				{timerTitle}
+			</span>
 			<div className='bg-white h-[25px] w-[25px] sm:h-[40px] sm:w-[40px] mx-2 flex justify-center items-center rounded-[5px]'>
 				{hour}
 			</div>

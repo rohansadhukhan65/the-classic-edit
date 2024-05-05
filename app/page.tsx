@@ -1,16 +1,31 @@
 'use client';
-import CollectionCards from '@/components/CollectionCards/CollectionCards';
-import FlashSalesBar from '@/components/FlashSalesBar/FlashSalesBar';
-import Footer from '@/components/Footer/Footer';
-import Header from '@/components/Header/Header';
-import HeroSlider from '@/components/HeroSlider/HeroSlider';
+// import CollectionCards from '@/components/CollectionCards/CollectionCards';
+// import FlashSalesBar from '@/components/FlashSalesBar/FlashSalesBar';
+// import Footer from '@/components/Footer/Footer';
+// import Header from '@/components/Header/Header';
+// import HeroSlider from '@/components/HeroSlider/HeroSlider';
 import Antistatic from '@/components/Icons/Antistatic';
 import Breathable from '@/components/Icons/Breathable';
 import QuickDry from '@/components/Icons/QuickDry';
 import Streachable from '@/components/Icons/Streachable';
-import ProductCardWithCategoryTab from '@/components/ProductCardWithCategoryTab/ProductCardWithCategoryTab';
+// import ProductCardWithCategoryTab from '@/components/ProductCardWithCategoryTab/ProductCardWithCategoryTab';
 import Layout from '@/components/Layout';
 import React from 'react';
+import dynamic from 'next/dynamic';
+
+const FlashSalesBar = dynamic(
+	() => import('../components/FlashSalesBar/FlashSalesBar'),
+);
+const Header = dynamic(() => import('../components/Header/Header'));
+const HeroSlider = dynamic(() => import('../components/HeroSlider/HeroSlider'));
+const ProductCardWithCategoryTab = dynamic(
+	() =>
+		import(
+			'../components/ProductCardWithCategoryTab/ProductCardWithCategoryTab'
+		),
+);
+const CollectionCards = dynamic(() => import('../components/CollectionCards/CollectionCards'));
+const Footer = dynamic(() => import('../components/Footer/Footer'));
 
 export default function Home() {
 	return (

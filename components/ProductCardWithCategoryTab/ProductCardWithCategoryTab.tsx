@@ -3,17 +3,20 @@ import React, { useEffect, useState } from 'react';
 import Tab from './Tab';
 import { Products, collections } from '@/data';
 import ProductCard from '../ProductCard/ProductCard';
+import Link from 'next/link';
 
 const ProductCardWithCategoryTab = () => {
 	const [FilteredProductsByCategory, setFilteredProductsByCategory] =
 		useState(Products);
 	const [SelectedTab, setSelectedTab] = useState<any>(collections[0].name);
 
+	// Filtering Products on changing of category .....
 	useEffect(() => {
 		setFilteredProductsByCategory((p) =>
 			Products.filter((f) => f.collection == SelectedTab && f),
 		);
 	}, [SelectedTab]);
+
 	return (
 		<>
 			<Tab
@@ -42,9 +45,12 @@ const ProductCardWithCategoryTab = () => {
 				</div>
 			</Tab>
 			<div className='text-center my-5'>
-				<button className='py-2 bg-gray-950 text-white px-6 rounded-md hover:bg-gray-800 transition-all duration-200'>
+				<Link
+					href={`/collection/${SelectedTab}`}
+					className='py-2 bg-gray-950 text-white px-6 rounded-md hover:bg-gray-800 transition-all duration-200'
+				>
 					View All{' '}
-				</button>
+				</Link>
 			</div>
 		</>
 	);

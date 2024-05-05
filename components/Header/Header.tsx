@@ -52,11 +52,11 @@ export default function Header() {
 			</div>
 			{/* Menu */}
 			<div className='gap-5 hidden md:flex'>
-				<div className='cursor-pointer'>Home</div>
-				<div className='cursor-pointer'>Men</div>
-				<div className='cursor-pointer'>Women</div>
-				<div className='cursor-pointer'>Exclusive</div>
-				<div className='cursor-pointer'>Blog</div>
+				<Link href={'/'} className='cursor-pointer'>Home</Link>
+				<Link href={'/'} className='cursor-pointer'>Men</Link>
+				<Link href={'/'} className='cursor-pointer'>Women</Link>
+				<Link href={'/'} className='cursor-pointer'>Exclusive</Link>
+				<Link href={'/'} className='cursor-pointer'>Blog</Link>
 			</div>
 			{/* Nav Icons */}
 			<div className='flex gap-2'>

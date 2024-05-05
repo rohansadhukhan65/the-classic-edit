@@ -8,6 +8,8 @@ import './CartDrawer.css';
 const CartDrawer = () => {
 	const { isOpen, cartDisplayHandler, cart }: any = useCartState();
 	const [totalCartPrice, setTotalCartPrice] = useState(0);
+	const [paymentMethod, setPaymentMethod] = useState<any>('Online Payment');
+	const [openPaymentSelect, setOpenPaymentSelect] = useState<any>(null);
 
 	function calculate12Percent(number: any) {
 		return number * 0.12;
@@ -33,7 +35,7 @@ const CartDrawer = () => {
 						className='ml-auto cursor-pointer'
 						onClick={cartDisplayHandler}
 					>
-						<div className='w-[30px] h-[30px] bg-gray-400 m-6 p-2 rounded-xl flex justify-center items-center'>
+						<div className='w-[35px] h-[35px] bg-black m-6 p-0 rounded-xl flex justify-center items-center'>
 							<RightArrowIcon />
 						</div>
 					</div>
@@ -146,8 +148,56 @@ const CartDrawer = () => {
 				{/* Payment Button */}
 				<div className='absolute bottom-0 flex justify-around w-full h-16'>
 					<div>
-						<div className='text-sm'>Payment By</div>
-						<div className='font-semibold'>Cash on Delivery</div>
+						<div className='text-sm flex justify-start gap-x-1'>
+							<p>Payment By</p>
+							<div className='relative'>
+								{/* Button */}
+								<button
+									className='border px-1 rounded-md shadow-sm'
+									onClick={() =>
+										setOpenPaymentSelect(
+											(prevState: any) => !prevState,
+										)
+									}
+									type='button'
+								>
+									{/* Show different content based on the dropdown state */}
+									{'▼'}
+								</button>
+
+								{/* Options */}
+								{openPaymentSelect && (
+									<div className='absolute left-0 bottom-6 mt-2 w-48 bg-white rounded-md shadow-lg z-10'>
+										<p
+											onClick={() => {
+												setOpenPaymentSelect(
+													(prevState: any) => !prevState,
+												)
+												setPaymentMethod('Cash On Delivery');
+											}}
+											className={`py-2 px-4 cursor-pointer rounded-md ${paymentMethod === 'Cash On Delivery' && 'bg-black text-white'}`}
+										>
+											Cash On Delivery
+										</p>
+										<p
+											onClick={() => {
+												setOpenPaymentSelect(
+													(prevState: any) => !prevState,
+												)
+												setPaymentMethod('Online Payment')
+											}}
+											className={`py-2 px-4 cursor-pointer rounded-md ${paymentMethod === 'Online Payment' && 'bg-black text-white'}`}
+										>
+											Online Payment
+										</p>
+									</div>
+								)}
+							</div>
+						</div>
+
+						<div className='font-semibold capitalize'>
+							{paymentMethod}
+						</div>
 					</div>
 					<div>
 						<button className='bg-black text-white px-5 py-2 rounded-md'>
