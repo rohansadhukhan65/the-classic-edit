@@ -4,15 +4,17 @@
 // import Footer from '@/components/Footer/Footer';
 // import Header from '@/components/Header/Header';
 // import HeroSlider from '@/components/HeroSlider/HeroSlider';
-import Antistatic from '@/components/Icons/Antistatic';
-import Breathable from '@/components/Icons/Breathable';
-import QuickDry from '@/components/Icons/QuickDry';
-import Streachable from '@/components/Icons/Streachable';
+// import Antistatic from '@/components/Icons/Antistatic';
+// import Breathable from '@/components/Icons/Breathable';
+// import QuickDry from '@/components/Icons/QuickDry';
+// import Streachable from '@/components/Icons/Streachable';
 // import ProductCardWithCategoryTab from '@/components/ProductCardWithCategoryTab/ProductCardWithCategoryTab';
-import Layout from '@/components/Layout';
+// import Layout from '@/components/Layout';
 import React from 'react';
 import dynamic from 'next/dynamic';
 
+// Components .....
+const Layout = dynamic(() => import('../components/Layout'));
 const FlashSalesBar = dynamic(
 	() => import('../components/FlashSalesBar/FlashSalesBar'),
 );
@@ -24,8 +26,16 @@ const ProductCardWithCategoryTab = dynamic(
 			'../components/ProductCardWithCategoryTab/ProductCardWithCategoryTab'
 		),
 );
-const CollectionCards = dynamic(() => import('../components/CollectionCards/CollectionCards'));
+const CollectionCards = dynamic(
+	() => import('../components/CollectionCards/CollectionCards'),
+);
 const Footer = dynamic(() => import('../components/Footer/Footer'));
+
+// Icons .....
+const Antistatic = dynamic(() => import('../components/Icons/Antistatic'));
+const Breathable = dynamic(() => import('../components/Icons/Breathable'));
+const QuickDry = dynamic(() => import('../components/Icons/QuickDry'));
+const Streachable = dynamic(() => import('../components/Icons/Streachable'));
 
 export default function Home() {
 	return (
