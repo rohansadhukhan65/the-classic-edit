@@ -7,7 +7,7 @@ const CollectionCards = () => {
 	return (
 		<div className='p-14'>
 			<h2 className='text-center text-4xl font-semibold my-5'>
-				 Collection's
+				 Collection&apos;s
 			</h2>
 			<div className='flex flex-col justify-center items-center md:flex-row md:gap-5'>
 				{collections &&
