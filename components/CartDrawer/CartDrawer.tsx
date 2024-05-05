@@ -21,7 +21,7 @@ const CartDrawer = () => {
 		<motion.div
 			animate={{ width: isOpen }}
 			transition={{ delay: 0.3 }}
-			className={`${isOpen ? '' : 'hidden'} fixed right-0 top-0 z-10 h-full bg-white shadow-md overflow-hidden`}
+			className={`${isOpen ? '' : 'hidden'} fixed right-0 top-0 z-10 h-screen bg-white shadow-md overflow-hidden`}
 		>
 			<div className='relative w-full h-full'>
 				{/* Cart Header */}

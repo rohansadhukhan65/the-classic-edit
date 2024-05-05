@@ -47,7 +47,10 @@ const ProductCard = ({
 	return (
 		<>
 			<div className='flex flex-col w-[170px] md:w-[200px]  gap-y-3 m-3 mx-auto'>
-				<Link href={`product/${ProductID}`} className='h-[320px] w-auto relative '>
+				<Link
+					href={`product/${ProductID}`}
+					className='h-[320px] w-auto relative '
+				>
 					{/* Image */}
 					<Image
 						src={`${ImageUrl}`}
@@ -70,8 +73,8 @@ const ProductCard = ({
 				<div>
 					{/* Product Title */}
 					<div className='font-semibold'>
-						{ProductTitle.substring(0, 18)}{' '}
-						{ProductTitle && ProductTitle?.length > 18 ? ' ...' : ''}
+						{ProductTitle.substring(0, 15)}{' '}
+						{ProductTitle && ProductTitle?.length > 15 ? ' ...' : ''}
 					</div>
 				</div>
 				<div>
