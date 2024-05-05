@@ -4,7 +4,11 @@ import React, { lazy, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { useCartState } from '@/Zustand/useCartState';
-import CartDrawer from './CartDrawer/CartDrawer';
+import dynamic from 'next/dynamic';
+
+// Components .....
+// import CartDrawer from './CartDrawer/CartDrawer';
+const CartDrawer = dynamic(() => import('../components/CartDrawer/CartDrawer'));
 
 // Components .....
 
