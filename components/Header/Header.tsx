@@ -8,6 +8,7 @@ import Link from 'next/link';
 import MobileNav from '../Icons/MobileNav';
 import Logo from '../Icons/Logo';
 import LogoMobile from '../Icons/LogoMobile';
+import Image from 'next/image';
 
 export default function Header() {
 	const { cartDisplayHandler, cart }: any = useCartState();
@@ -41,7 +42,7 @@ export default function Header() {
 					href={'/'}
 					className='md:text-xl md:block hidden cursor-pointer font-bold'
 				>
-					<Logo />
+					<Image src={'/Logo.png'} width={140} height={70} alt='The Classic Edit' />
 				</Link>
 				<Link
 					href={'/'}
@@ -52,11 +53,21 @@ export default function Header() {
 			</div>
 			{/* Menu */}
 			<div className='gap-5 hidden md:flex'>
-				<Link href={'/'} className='cursor-pointer'>Home</Link>
-				<Link href={'/'} className='cursor-pointer'>Men</Link>
-				<Link href={'/'} className='cursor-pointer'>Women</Link>
-				<Link href={'/'} className='cursor-pointer'>Exclusive</Link>
-				<Link href={'/'} className='cursor-pointer'>Blog</Link>
+				<Link href={'/'} className='cursor-pointer'>
+					Home
+				</Link>
+				<Link href={'/'} className='cursor-pointer'>
+					Men
+				</Link>
+				<Link href={'/'} className='cursor-pointer'>
+					Women
+				</Link>
+				<Link href={'/'} className='cursor-pointer'>
+					Exclusive
+				</Link>
+				<Link href={'/'} className='cursor-pointer'>
+					Blog
+				</Link>
 			</div>
 			{/* Nav Icons */}
 			<div className='flex gap-2'>

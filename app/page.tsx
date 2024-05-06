@@ -12,6 +12,7 @@
 // import Layout from '@/components/Layout';
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 // Components .....
 const Layout = dynamic(() => import('../components/Layout'));
@@ -32,10 +33,10 @@ const CollectionCards = dynamic(
 const Footer = dynamic(() => import('../components/Footer/Footer'));
 
 // Icons .....
-const Antistatic = dynamic(() => import('../components/Icons/Antistatic'));
-const Breathable = dynamic(() => import('../components/Icons/Breathable'));
-const QuickDry = dynamic(() => import('../components/Icons/QuickDry'));
-const Streachable = dynamic(() => import('../components/Icons/Streachable'));
+// const Antistatic = dynamic(() => import('../components/Icons/Antistatic'));
+// const Breathable = dynamic(() => import('../components/Icons/Breathable'));
+// const QuickDry = dynamic(() => import('../components/Icons/QuickDry'));
+// const Streachable = dynamic(() => import('../components/Icons/Streachable'));
 
 export default function Home() {
 	return (
@@ -71,17 +72,17 @@ export default function Home() {
 
 				{/* Icons */}
 				<div className='grid md:grid-cols-4 grid-cols-2'>
-					<div>
-						<Antistatic />
+					<div className='mx-auto'>
+						<Image src={'/anti-static.png'} height={100} width={100} alt='the classic edit' />
 					</div>
-					<div>
-						<Breathable />
+					<div className='mx-auto'>
+						<Image src={'/Breathble.png'} height={100} width={100} alt='the classic edit' />
 					</div>
-					<div>
-						<QuickDry />
+					<div className='mx-auto'>
+						<Image src={'/QuickDry.png'} height={100} width={100} alt='the classic edit' />
 					</div>
-					<div>
-						<Streachable />
+					<div className='mx-auto'>
+						<Image src={'/streachble.png'} height={100} width={100} alt='the classic edit' />
 					</div>
 				</div>
 			</div>
