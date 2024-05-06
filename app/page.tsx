@@ -3,7 +3,7 @@
 // import FlashSalesBar from '@/components/FlashSalesBar/FlashSalesBar';
 // import Footer from '@/components/Footer/Footer';
 // import Header from '@/components/Header/Header';
-// import HeroSlider from '@/components/HeroSlider/HeroSlider';
+import HeroSlider from '@/components/HeroSlider/HeroSlider';
 // import Antistatic from '@/components/Icons/Antistatic';
 // import Breathable from '@/components/Icons/Breathable';
 // import QuickDry from '@/components/Icons/QuickDry';
@@ -20,7 +20,7 @@ const FlashSalesBar = dynamic(
 	() => import('../components/FlashSalesBar/FlashSalesBar'),
 );
 const Header = dynamic(() => import('../components/Header/Header'));
-const HeroSlider = dynamic(() => import('../components/HeroSlider/HeroSlider'));
+// const HeroSlider = dynamic(() => import('../components/HeroSlider/HeroSlider'));
 const ProductCardWithCategoryTab = dynamic(
 	() =>
 		import(
