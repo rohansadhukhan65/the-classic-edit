@@ -9,6 +9,7 @@ import MobileNav from '../Icons/MobileNav';
 import Logo from '../Icons/Logo';
 import LogoMobile from '../Icons/LogoMobile';
 import Image from 'next/image';
+import { collections } from '@/data';
 
 export default function Header() {
 	const { cartDisplayHandler, cart }: any = useCartState();
@@ -42,7 +43,12 @@ export default function Header() {
 					href={'/'}
 					className='md:text-xl md:block hidden cursor-pointer font-bold'
 				>
-					<Image src={'/Logo.png'} width={140} height={70} alt='The Classic Edit' />
+					<Image
+						src={'/Logo.png'}
+						width={140}
+						height={70}
+						alt='The Classic Edit'
+					/>
 				</Link>
 				<Link
 					href={'/'}
@@ -56,16 +62,14 @@ export default function Header() {
 				<Link href={'/'} className='cursor-pointer'>
 					Home
 				</Link>
-				<Link href={'/'} className='cursor-pointer'>
-					Men
-				</Link>
-				<Link href={'/'} className='cursor-pointer'>
-					Women
-				</Link>
-				<Link href={'/'} className='cursor-pointer'>
-					Exclusive
-				</Link>
-				<Link href={'/'} className='cursor-pointer'>
+				{collections.slice(0, 3).map((collection,key) => (
+					<div  key={key}>
+						<Link href={`/collection/${collection.name}`} className='cursor-pointer'>
+							{collection.name}
+						</Link>
+					</div>
+				))}
+				<Link href={'/blog/all'} className='cursor-pointer'>
 					Blog
 				</Link>
 			</div>

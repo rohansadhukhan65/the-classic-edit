@@ -1,4 +1,6 @@
-export const Products = [
+import { Collection, Product } from "./Data/DataStructures";
+
+export const Products : Product[] = [
 	{
 		ProductID: '1',
 		ProductTitle: 'Classic Navy Suit',
@@ -117,7 +119,6 @@ export const Products = [
 		ProductReviewCount: 75,
 		ProductStarCount: 3,
 		DiscountPrice: 239,
-		DiscountPersentage: 14.3,
 		stock: 35,
 	},
 	{
@@ -283,30 +284,42 @@ export const Products = [
 	},
 ];
 
-export const collections = [
+export const collections : Collection[] = [
 	{
 		name: 'Classic',
 		description: 'Timeless and elegant suits for any occasion.',
 		image: '/Img/CollectionImages/classic-collection.jpg',
+		modelImage: '/Img/CollectionImages/classic-collection-model.png'
 	},
 	{
 		name: 'Modern',
 		description: 'Sleek and contemporary suits for the modern man.',
 		image: '/Img/CollectionImages/modern-collection.jpg',
+		modelImage: '/Img/CollectionImages/classic-collection-model.png'
+
 	},
 	{
 		name: 'Vintage',
 		description: 'Vintage-inspired suits for a retro look.',
 		image: '/Img/CollectionImages/vintage-collection.jpg',
+		modelImage: '/Img/CollectionImages/classic-collection-model.png'
+
 	},
 	{
 		name: 'Formal',
 		description: 'Elegant tuxedos and formal suits for special occasions.',
 		image: '/Img/CollectionImages/formal-collection.jpg',
+		modelImage: '/Img/CollectionImages/classic-collection-model.png'
+
 	},
 	{
 		name: 'Business',
 		description: 'Sophisticated business suits for the professional man.',
 		image: '/Img/CollectionImages/business-collection.jpg',
+		modelImage: '/Img/CollectionImages/classic-collection-model.png'
+
 	},
 ];
+
+
+
