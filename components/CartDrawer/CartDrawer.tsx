@@ -80,7 +80,7 @@ const CartDrawer = () => {
 												+
 											</div>
 											{/* qty */}
-											<div className='mx-2'>1</div>
+											<div className='mx-2'>{p.qty}</div>
 											{/* - */}
 											<div className='px-2 rounded-lg bg-gray-300'>
 												-

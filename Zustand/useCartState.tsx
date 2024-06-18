@@ -11,7 +11,20 @@ export const useCartState: any = create((set: any) => ({
 	AddToCart: (pID: any) =>
 		set((s: any) => {
 			const productToAdd = Products.find((f) => f.ProductID === pID);
-			const updatedCart = [...s.cart, productToAdd];
+			const isProductAlradyAdded = s.cart.find(
+				(p: any) => p.ProductID === productToAdd?.ProductID,
+			);
+			let updatedCart;
+			if (isProductAlradyAdded) {
+				updatedCart = s.cart.map((item: any, index: any) => {
+					if (item.ProductID === isProductAlradyAdded.ProductID) {
+						item.qty += 1;
+					}
+					return item;
+				});
+			} else {
+				updatedCart = [...s.cart, { ...productToAdd, qty: 1 }];
+			}
 			updateLocalStorage(updatedCart);
 			return { cart: updatedCart };
 		}),
@@ -21,6 +34,8 @@ export const useCartState: any = create((set: any) => ({
 			updateLocalStorage(updatedCart);
 			return { cart: updatedCart };
 		}),
+	cartItemQuantityIncrease: (productId :any) => set((state: any) => {}),
+	cartItemQuantityDecrease: (productId:any) => set((state: any) => {}),
 	cartDisplayHandler: () =>
 		set((s: any) => {
 			return { isOpen: s.isOpen > 0 ? 0 : 360 };
